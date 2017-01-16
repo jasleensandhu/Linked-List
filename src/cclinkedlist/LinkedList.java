@@ -73,4 +73,14 @@ public class LinkedList<T> {
         System.out.println("Last Node deleted");
         traversal();
     }
+
+    public void insertAtTheEnd(Node<T> end) {
+        Node<T> temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = end;
+        System.out.println("Node inserted at the end");
+        traversal();
+    }
 }

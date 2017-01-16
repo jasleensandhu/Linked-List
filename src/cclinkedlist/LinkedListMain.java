@@ -21,6 +21,8 @@ public class LinkedListMain {
         LinkedList.Node<Integer> seventh = new LinkedList.Node<>(1);
         LinkedList.Node<Integer> eighth = new LinkedList.Node<>(4);
         LinkedList.Node<Integer> first = new LinkedList.Node<>(6);  
+        LinkedList.Node<Integer> last = new LinkedList.Node<>(0); 
+        
         ll.head.setNext(second);
         second.setNext(third);
         third.setNext(fourth);
@@ -32,6 +34,7 @@ public class LinkedListMain {
         ll.deleteFirstNode();        
         ll.insertAtBeginning(first);
         ll.deleteLastNode();
+        ll.insertAtTheEnd(last);
     }  
     
 }
