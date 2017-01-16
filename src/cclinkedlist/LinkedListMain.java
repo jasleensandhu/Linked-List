@@ -31,6 +31,7 @@ public class LinkedListMain {
         ll.traversal();
         ll.deleteFirstNode();        
         ll.insertAtBeginning(first);
+        ll.deleteLastNode();
     }  
     
 }

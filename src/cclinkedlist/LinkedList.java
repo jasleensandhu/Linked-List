@@ -43,7 +43,7 @@ public class LinkedList<T> {
     public void traversal() {
         Node temp = head;
         while (temp != null) {
-            System.out.print(temp.data+"  ");
+            System.out.print(temp.data + "  ");
             temp = temp.next;
         }
         System.out.println();
@@ -56,11 +56,21 @@ public class LinkedList<T> {
         System.out.println("First Node deleted");
         traversal();
     }
-    
-        public void insertAtBeginning(Node<T> first) {
+
+    public void insertAtBeginning(Node<T> first) {
         first.setNext(head);
         head = first;
         System.out.println("Element inserted at the beginning");
+        traversal();
+    }
+
+    public void deleteLastNode() {
+        Node<T> temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+        System.out.println("Last Node deleted");
         traversal();
     }
 }
