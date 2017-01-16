@@ -80,6 +80,7 @@ public class LinkedList<T> {
             temp = temp.next;
         }
         temp.next = end;
+        end.next=null;
         System.out.println("Node inserted at the end");
         traversal();
     }
@@ -109,6 +110,16 @@ public class LinkedList<T> {
         temp.next  = temp.next.next; 
         System.out.println("Node deleted from the specified position");
         traversal();
+    }
+    
+    public void lengthOfLinkedList(){
+        Node<T> temp = head;
+        int count = 0;
+        while(temp!= null){
+            count=count+1;
+            temp=temp.next;
+        }
+        System.out.println("Length of the Linked List is: "+count);
     }
     
 }

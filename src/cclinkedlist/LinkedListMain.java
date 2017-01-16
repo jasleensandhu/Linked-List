@@ -47,6 +47,7 @@ public class LinkedListMain {
         ll.insertAtTheEnd(last);       
         ll.insertAtGivenPosition(random, n);
         ll.deleteAtGivenPosition(n);
+        ll.lengthOfLinkedList();
         
         scan.close();
 
