@@ -20,7 +20,7 @@ public class LinkedListMain {
         LinkedList.Node<Integer> sixth = new LinkedList.Node<>(9);
         LinkedList.Node<Integer> seventh = new LinkedList.Node<>(1);
         LinkedList.Node<Integer> eighth = new LinkedList.Node<>(4);
-        
+        LinkedList.Node<Integer> first = new LinkedList.Node<>(6);  
         ll.head.setNext(second);
         second.setNext(third);
         third.setNext(fourth);
@@ -29,7 +29,8 @@ public class LinkedListMain {
         sixth.setNext(seventh);
         seventh.setNext(eighth);
         ll.traversal();
-        ll.deleteFirstNode();
+        ll.deleteFirstNode();        
+        ll.insertAtBeginning(first);
     }  
     
 }

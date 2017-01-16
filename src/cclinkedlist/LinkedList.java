@@ -56,4 +56,11 @@ public class LinkedList<T> {
         System.out.println("First Node deleted");
         traversal();
     }
+    
+        public void insertAtBeginning(Node<T> first) {
+        first.setNext(head);
+        head = first;
+        System.out.println("Element inserted at the beginning");
+        traversal();
+    }
 }
