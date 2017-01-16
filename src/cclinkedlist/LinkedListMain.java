@@ -28,7 +28,7 @@ public class LinkedListMain {
         LinkedList.Node<Integer> last = new LinkedList.Node<>(0);
         LinkedList.Node<Integer> random = new LinkedList.Node<>(5);
         
-        System.out.println(" Enter the position");        
+        System.out.println("Enter the position to add the node: ");        
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
 
@@ -46,6 +46,7 @@ public class LinkedListMain {
         ll.deleteLastNode();
         ll.insertAtTheEnd(last);       
         ll.insertAtGivenPosition(random, n);
+        ll.deleteAtGivenPosition(n);
         
         scan.close();
 

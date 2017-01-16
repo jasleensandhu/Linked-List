@@ -99,4 +99,16 @@ public class LinkedList<T> {
         traversal();
     }
     
+    public void deleteAtGivenPosition(int n){
+        int count =1;
+        Node<T> temp = head;
+        while(count<n-1){
+            temp = temp.next;
+            count++;
+        }
+        temp.next  = temp.next.next; 
+        System.out.println("Node deleted from the specified position");
+        traversal();
+    }
+    
 }
