@@ -49,5 +49,11 @@ public class LinkedList<T> {
         System.out.println();
     }
 
-    
+    public void deleteFirstNode() {
+        Node<T> temp = head;
+        head = head.next;
+        temp.next = null;
+        System.out.println("First Node deleted");
+        traversal();
+    }
 }
