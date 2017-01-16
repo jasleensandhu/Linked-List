@@ -83,4 +83,20 @@ public class LinkedList<T> {
         System.out.println("Node inserted at the end");
         traversal();
     }
+    
+    
+    public void insertAtGivenPosition(Node<T> random, int n){
+        Node<T> temp = head;
+        int count = 1;
+        while(count<n-1){
+            count++;
+            temp = temp.next;
+        }
+        random.next = temp.next;
+        temp.next = random;
+        
+        System.out.println("Node entered at specified position");
+        traversal();
+    }
+    
 }

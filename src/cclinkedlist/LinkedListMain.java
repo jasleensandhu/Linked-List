@@ -9,8 +9,12 @@ package cclinkedlist;
  *
  * @author Jasleen
  */
+import java.util.*;
+
 public class LinkedListMain {
-        public static void main (String[] args){
+
+    public static void main(String[] args) {
+        
         LinkedList<Integer> ll = new LinkedList<>();
         ll.head = new LinkedList.Node<>(5);
         LinkedList.Node<Integer> second = new LinkedList.Node<>(3);
@@ -20,9 +24,15 @@ public class LinkedListMain {
         LinkedList.Node<Integer> sixth = new LinkedList.Node<>(9);
         LinkedList.Node<Integer> seventh = new LinkedList.Node<>(1);
         LinkedList.Node<Integer> eighth = new LinkedList.Node<>(4);
-        LinkedList.Node<Integer> first = new LinkedList.Node<>(6);  
-        LinkedList.Node<Integer> last = new LinkedList.Node<>(0); 
+        LinkedList.Node<Integer> first = new LinkedList.Node<>(6);
+        LinkedList.Node<Integer> last = new LinkedList.Node<>(0);
+        LinkedList.Node<Integer> random = new LinkedList.Node<>(5);
         
+        System.out.println(" Enter the position");        
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+
+
         ll.head.setNext(second);
         second.setNext(third);
         third.setNext(fourth);
@@ -31,10 +41,14 @@ public class LinkedListMain {
         sixth.setNext(seventh);
         seventh.setNext(eighth);
         ll.traversal();
-        ll.deleteFirstNode();        
+        ll.deleteFirstNode();
         ll.insertAtBeginning(first);
         ll.deleteLastNode();
-        ll.insertAtTheEnd(last);
-    }  
-    
+        ll.insertAtTheEnd(last);       
+        ll.insertAtGivenPosition(random, n);
+        
+        scan.close();
+
+    }
+
 }
